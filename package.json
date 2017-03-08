@@ -1,0 +1,22 @@
+{
+  "name": "rxjs-workshop",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimulle/rxjs-workshop.git"
+  },
+  "author": "jim ulle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimulle/rxjs-workshop/issues"
+  },
+  "homepage": "https://github.com/jimulle/rxjs-workshop#readme",
+  "dependencies": {
+    "rxjs": "^5.2.0"
+  }
+}
