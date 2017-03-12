@@ -16,7 +16,7 @@
 
   function main() {
     var $input = $('#textInput'),
-        $results = $('#results'),
+        $list = $('#wikipediaList'),
         $hits = $('#hits');
 
     // Get all distinct key up events from the input and only fire if long enough and distinct
@@ -27,16 +27,24 @@
       .filter(function (text) {
         return text.length > 2; // Only if the text is longer than 2 characters
       })
-      .debounceTime(750 /* Pause for 750ms */ )
+      .debounceTime(250 /* Pause for 250ms */ )
       .distinctUntilChanged(); // Only if the value has changed
+
+    // clear suggestions o blue
+    var blur = Rx.Observable.fromEvent($input, 'blur')
+      .subscribe(
+        function () {
+          $list.empty();
+        }
+      );
 
     var searcher = keyup.switchMap(searchWikipedia);
 
     searcher.subscribe(
       function (data) {
-        $results
+        $list
           .empty()
-          .append ($.map(data[1], function (v) { return $('<li>').text(v); }));
+          .append ($.map(data[1], function (v) { return $('<option>').text(v); }));
         $hits
           .html( parseInt( $hits.html() ) + 1 );
       },
