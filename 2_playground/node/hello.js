@@ -7,6 +7,7 @@ Rx.Observable
         word => console.log( word.join(' ') )
     );
 
+let arr = [ 'Nice', 'to', 'meet', 'you', 'RxJS' ];
 Rx.Observable
     .from( arr )
     .reduce( (str, word) => { return str += (word + ' '); }, '' )
