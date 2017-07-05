@@ -8,6 +8,14 @@ Reactive programming is programming with asynchronous data streams. This isn't a
 ### So what's the big deal with Observables?
 While Observables may just sound like the newest evolution of callbacks -> promises -> ..., there is a lot more to Observables.
 
+### What are we going to cover?
+ - 1. Let's talk about streams and observables
+ - 2. Basic array example
+ - 3. Difference between hot and cold observables
+ - 4. Subjects example
+ - 5. Autocomplete example
+ - 6. Example from Rx Intro
+ - 7. Integrating RxJS with existing callback and promise based code (stretch)
 
 ### RxJS Resources
  - [ReactiveX/rxjs github repo](https://github.com/ReactiveX/rxjs)
@@ -18,4 +26,4 @@ While Observables may just sound like the newest evolution of callbacks -> promi
 
 
 
- # Drinking the RxJS KoolAid
+ # Time to Start Drinking the RxJS KoolAid
