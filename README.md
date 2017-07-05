@@ -1,15 +1,13 @@
-# Drinking the RxJS KoolAid
+# RxJS: Getting Uncomfortable with Reactive Extensions
+
+From Rx what? To this Observables thing is pretty cool. To how did I live before Reactive Extensions!?!
 
 ### What is RxJS?
+Reactive programming is programming with asynchronous data streams. This isn't anything new. Click events are really an asynchronous event stream, that you can observe and do some side effects. Reactive is that idea on steroids. You are able to create data streams of anything, not just from click and hover events. Streams are cheap and ubiquitous, anything can be a stream: variables, user inputs, properties, caches, data structures, etc. On top of that, we have a toolbox of functions to combine, create and filter any of those streams.
 
 ### So what's the big deal with Observables?
 While Observables may just sound like the newest evolution of callbacks -> promises -> ..., there is a lot more to Observables.
 
-### How is this workshop set-up?
-This workshop is set-up as a mix of three different activities.
-1. Examples to show the capabilities and wide variety of applications of Observables
-2. Playground to explore Observables and methods
-3. Exercises to use our new knowledge of Observables to solve some problems
 
 ### RxJS Resources
  - [ReactiveX/rxjs github repo](https://github.com/ReactiveX/rxjs)
@@ -17,3 +15,7 @@ This workshop is set-up as a mix of three different activities.
  - [RxMarbles](http://rxmarbles.com)
  - [RxJS Missing Intro](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
  - [RxJS 4.0 documentation](https://github.com/Reactive-Extensions/RxJS/tree/master/doc) <-- dated but still a great resource
+
+
+
+ # Drinking the RxJS KoolAid
