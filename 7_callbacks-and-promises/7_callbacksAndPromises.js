@@ -12,6 +12,7 @@ result.subscribe(x => console.log(x));
 //   bindNodeCallback
 const readFileAsObservable = Rx.Observable.bindNodeCallback(fs.readFile);
 result = readFileAsObservable('./file.txt', 'utf8');
+result = readFileAsObservable('./file.txt', 'utf8');
 // cold observable (will not start emitting values until subscribed to)
 result.subscribe(x => console.log(x));
 

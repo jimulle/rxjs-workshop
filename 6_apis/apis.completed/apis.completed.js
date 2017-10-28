@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
               refreshClickStream.map(function(){ 
                   return null;
               })
-          )
-          .startWith(null);
+          );
   }
 
   var suggestion1Stream = createSuggestionStream(close1ClickStream);

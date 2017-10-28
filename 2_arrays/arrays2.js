@@ -9,11 +9,11 @@ const emitOverInterval = (arr, ms) => {
 };
 
 // add one to each number then log the result
-emitOverInterval([0,1,2,3,4], 500)
-    .map(x=>x+1)
-    .subscribe(
-        value => console.log( value )
-    );
+// emitOverInterval([0,1,2,3,4], 500)
+//     .map(x=>x+1)
+//     .subscribe(
+//         value => console.log( value )
+//     );
 
 // // merge two observable streams
 // const stream1 = emitOverInterval([1,2,3,4,5,6], 500);
@@ -29,13 +29,15 @@ emitOverInterval([0,1,2,3,4], 500)
     //    merged: ----1---a2----3--b-4----5-c--|-->
 
 // zip two observable streams
-// const stream1 = emitOverInterval([1,2,3], 500);
-// const stream2 = emitOverInterval(['a','b','c'], 900);
-// stream1
-//     .zip(stream2, (one, two) => { return `{ one: ${one}, two: ${two} }`; })
-//     .subscribe(
-//         value => console.log( value )
-//     );
+const stream1 = emitOverInterval([1,2,3], 500);
+const stream2 = emitOverInterval(['a','b','c'], 900);
+stream1
+    .zip(stream2, (one, two) => { return `{ one: ${one}, two: ${two} }`; })
+    .subscribe(
+        value => console.log( value )
+    );
+
+stream2.subscribe( v => console.log(v) );
 
     //   stream1: ----1----2----3--------------|-->
     //   stream2: --------a--------b--------c--|-->

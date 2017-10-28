@@ -1,10 +1,10 @@
 const Rx = require('rxjs');
 
 /* behavior subject emits most recent value to new subscriptions */
-let userSubject = new Rx.BehaviorSubject();
+let userSubject = new Rx.BehaviorSubject({ username: 'billyballou@test.com', id: '555' });
 
 /* billyballou will have username logged */
-userSubject.next( { username: 'billyballou@test.com', id: '555' } );
+// userSubject.next(  );
 
 /* jrulle will have both username and id logged */
 userSubject.subscribe(

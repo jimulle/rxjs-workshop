@@ -27,8 +27,8 @@
       .filter(function (text) {
         return text.length > 2; // Only if the text is longer than 2 characters
       })
-      .debounceTime(250 /* Pause for 250ms */ )
-      .distinctUntilChanged(); // Only if the value has changed
+      .debounceTime(250 /* Pause for 250ms */ );
+      // .distinctUntilChanged(); // Only if the value has changed
 
     // clear suggestions on blur
     var blur = Rx.Observable.fromEvent(textinput, 'blur')
